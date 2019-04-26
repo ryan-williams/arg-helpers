@@ -1,5 +1,5 @@
 
-export ah="$s/arg-helpers"
+export ah="$(dirname "${BASH_SOURCE[0]}")"
 
 alias reverse=reverse-stdin
 
@@ -87,10 +87,14 @@ defn una uname -a
 
 defn cn cat-n
 
-defn kc kill-char
-defn kcs kill-char
-defn kq kill-char '\"'
-defn kqs kill-char '\"'
+defn kc kill-regex
+defn kr kill-regex
+
+defn kcs kill-regexs
+defn krs kill-regexs
+
+defn kq kill-regex '\"'
+defn kqs kill-regex '\"'
 
 defn exists apply-test -e
 defn dne apply-test '!' -e
@@ -106,3 +110,7 @@ defn dpf take-to
 defn dff take-until
 
 alias cpt=capture
+
+defn dr1 drop-chars-right-n 1
+
+alias trd="tr -d"

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+cmd=
+for arg in "$@"; do
+	cmd="${cmd}${cmd:+;}s/$arg//g"
+done
+
+echo "$cmd"
+
+perl -pe "$cmd" "$@"
