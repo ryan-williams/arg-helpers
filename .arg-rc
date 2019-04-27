@@ -103,7 +103,6 @@ defn tk take
 defn tkr take-right
 
 defn tt take-to
-defn ttf take-to
 defn tu take-until
 defn tuf take-until
 defn dpf take-to
