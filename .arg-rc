@@ -51,8 +51,8 @@ alias er=escape-regex
 alias tff=take-from-first
 alias tkff=take-from-first
 
-alias tpf=take-past-first
-alias dtf=take-past-first  # aka. drop-to-first
+defn tpf take-past-first
+defn dtf take-past-first  # aka. drop-to-first
 
 alias dul=drop-until-last
 alias tfl=take-from-last
