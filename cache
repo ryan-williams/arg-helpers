@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# Cache a command to a file / read stdout from cache if the file is present
+#
+# Example:
+#
+#   $ cache jobs.json aws batch list-jobs --job-queue $queue --job-status FAILED \
+#   | jq '.jobSummaryList[] | select(.container.reason)'
+#
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <file> <cmd...>" >&2
+  exit 1
+fi
+
+path="$1"; shift
+if [ -e "$path" ]; then
+  echo "Cache hit" >&2
+  cat "$path"
+else
+  "$@" | tee "$path"
+fi
