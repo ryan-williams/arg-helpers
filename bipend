@@ -4,8 +4,6 @@ if [ $# -lt 2 ]; then
 	echo "Usage: $0 <before> <after> [file]" >&2
 	exit 1
 fi
-before="$1"
-shift
-after="$1"
-shift
+before="$1"; shift
+after="$1"; shift
 prepend "$before" "$@" | append "$after"
