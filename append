@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-if [ $# -eq 0 ]; then
-    echo "Usage: $0 <suffix> [args...]" >&2
+if [ $# -eq 1 ] || [ $# -eq 2 ]; then
+    suffix="$1"; shift
+    cat "$@" | perl -pe "s/$/$suffix/"
+else
+    echo "Usage: $0 <suffix> [file]" >&2
     exit 1
 fi
-suffix="$1"; shift
-perl -pe "s/$/$suffix/" "$@"
