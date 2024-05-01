@@ -84,6 +84,7 @@ alias cw=count-words
 alias ca=count
 
 defn una uname -a
+defn unm uname -m
 
 defn cn cat-n
 
