@@ -8,7 +8,7 @@ alias drr=drop-right-regex
 alias drn=drop-regex-n
 alias drrn=drop-right-regex-n
 
-alias dc=drop-chars
+alias dch=drop-chars
 alias dc1="drop-chars 1"
 alias dc2="drop-chars 2"
 alias dc3="drop-chars 3"
