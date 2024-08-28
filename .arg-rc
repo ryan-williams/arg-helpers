@@ -80,7 +80,6 @@ alias zs3="paste -d' ' - - -"
 alias t=cache
 alias ta="tee -a"
 
-alias cw=count-words
 alias ca=count
 
 defn una uname -a
