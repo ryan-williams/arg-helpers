@@ -134,3 +134,26 @@ alias cpt=capture
 defn dr1 drop-chars-right-n 1
 
 alias trd="tr -d"
+
+defn sdf sed -f
+defn sedf sed -f
+
+seds() {
+    # seds s/find1/replace1/ s/find2/replace2/ ...
+    args=()
+    for cmd in "$@"; do
+        args+=(-e "$cmd")
+    done
+    sed "${args[@]}"
+}
+export -f seds
+
+sedss() {
+    # sedss find1/replace1 find2/replace2 ...
+    args=()
+    for cmd in "$@"; do
+        args+=("s/$cmd/")
+    done
+    seds "${args[@]}"
+}
+export -f sedss
