@@ -115,6 +115,8 @@ defn kxs kill-regexs
 defn kq kill-regex '\"'
 defn kqs kill-regex '\"'
 
+defn kcr tr -d $'\r'
+
 defn exists apply-test -e
 defn dne apply-test '!' -e
 
