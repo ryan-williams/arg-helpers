@@ -60,14 +60,15 @@ alias dul=drop-until-last
 alias tfl=take-from-last
 alias tkfl=take-from-last
 
-alias dtl=drop-to-last
-alias tpl=take-past-last
+defn dtl drop-to-last
+defn tpl take-past-last
+defn tpls take-past-last /
 
-alias dfl=drop-from-last
-alias tul=take-until-last
+defn dfl drop-from-last
+defn tul take-until-last
 
-alias dpl=drop-past-last
-alias ttl=take-to-last
+defn dpl drop-past-last
+defn ttl take-to-last
 
 alias dfl.="drop-from-last ."
 
@@ -90,11 +91,26 @@ defn unm uname -m
 
 defn cn cat-n
 
-defn kc kill-regex
-defn kr kill-regex
+keep_n_chars() {
+    local n="$1"; shift
+    while IFS= read -r line; do
+        echo "${line:0:$n}"
+    done
+}
+export -f keep_n_chars
+defn knc keep_n_chars
+defn kc keep_n_chars
+defn kc1 keep_n_chars 1
+defn kc2 keep_n_chars 2
+defn kc3 keep_n_chars 3
+defn kc4 keep_n_chars 4
+defn kcs keep_n_chars
 
-defn kcs kill-regexs
+defn kr kill-regex
+defn kx kill-regex
+
 defn krs kill-regexs
+defn kxs kill-regexs
 
 defn kq kill-regex '\"'
 defn kqs kill-regex '\"'
