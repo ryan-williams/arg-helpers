@@ -2,6 +2,8 @@
 export ah="$(dirname "${BASH_SOURCE[0]}")"
 
 alias reverse=reverse-stdin
+alias rvi=reverse-stdin
+alias rvs=reverse-stdin
 
 alias dr=drop-regex
 alias drr=drop-right-regex
