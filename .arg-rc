@@ -79,8 +79,9 @@ alias ptn="paste -d'\n' - -"
 alias pt3="paste -d' ' - - -"
 alias zs3="paste -d' ' - - -"
 
-alias t=cache
+alias t=tee
 alias ta="tee -a"
+alias tc=cache
 
 alias ca=count
 
