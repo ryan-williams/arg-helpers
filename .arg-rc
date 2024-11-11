@@ -25,15 +25,15 @@ alias dcr3="drop-chars-right-n 3"
 alias dcr4="drop-chars-right-n 4"
 alias dcr5="drop-chars-right-n 5"
 
-alias sw=starts-with
-alias dsw="starts-with -v"
-alias nsw="starts-with -v"
-alias swv="starts-with -v"
+defn sw starts-with
+defn dsw starts-with -v
+defn nsw starts-with -v
+defn swv starts-with -v
 
-alias ew=ends-with
-alias dew="ends-with -v"
-alias new="ends-with -v"
-alias ewv="ends-with -v"
+defn ew ends-with
+defn dew ends-with -v
+defn new ends-with -v
+defn ewv ends-with -v
 
 alias pp=prepend
 alias ap=append
