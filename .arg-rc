@@ -135,6 +135,7 @@ alias cpt=capture
 defn dr1 drop-chars-right-n 1
 
 alias trd="tr -d"
+alias trdr="tr -d '\r'"
 
 defn sdf sed -f
 defn sedf sed -f
