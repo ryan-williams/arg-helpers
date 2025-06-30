@@ -90,6 +90,8 @@ alias ca=count
 defn una uname -a
 defn unm uname -m
 defn um uname -m
+defn umr uname -r
+defn unr uname -r
 
 defn cn cat-n
 
